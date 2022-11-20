@@ -1,3 +1,5 @@
+import authApi from '@/api/auth'
+
 export interface authState {
   isSubmitting: boolean
 }
@@ -21,8 +23,14 @@ const mutations = {
 }
 
 const actions = {
-  [actionTypes.register]({ commit }) {
+  [actionTypes.register]({ commit }, credentials) {
     commit(mutationTypes.registerStart)
+    return new Promise((resolve) => {
+      authApi
+        .register(credentials)
+        .then((response) => console.log(response))
+        .catch((e) => console.log(e))
+    })
   }
 }
 
