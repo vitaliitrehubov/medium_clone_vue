@@ -2,7 +2,6 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
-    "strict": true,
     "jsx": "preserve",
     "moduleResolution": "node",
     "skipLibCheck": true,
@@ -33,7 +32,7 @@
     "src/**/*.vue",
     "tests/**/*.ts",
     "tests/**/*.tsx"
-  ],
+, "src/main.ts", "src/main.ts", "src/store/index.js", "src/store/index.js", "src/store/modules/auth.js", "src/store/modules/auth.js"  ],
   "exclude": [
     "node_modules"
   ]
