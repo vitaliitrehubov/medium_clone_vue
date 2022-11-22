@@ -1,5 +1,5 @@
 <template>
-  <h1 class="text-center text-muted">Sign In</h1>
+  <h1 class="text-center text-muted text-capitalize">{{ $t('forms.signIn') }}</h1>
   <p class="text-center">
     Don't have an account?
     <router-link :to="{ name: 'register' }">Sign Up</router-link>

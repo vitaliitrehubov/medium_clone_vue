@@ -5,11 +5,13 @@ import router from './router'
 import store from './store'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
+import i18n from './plugins/i18n/i18n'
 
 const app = createApp(App)
 
 app
-  .use(VueAxios, axios)
-  .use(store)
   .use(router)
+  .use(store)
+  .use(VueAxios, axios)
+  .use(i18n)
   .mount('#app')
