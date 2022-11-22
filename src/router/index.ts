@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import AuthPage from '@/views/AuthPage.vue'
 import McvRegister from '@/views/McvRegister.vue'
+import McvLogin from '@/views/McvLogin.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -9,10 +11,23 @@ const routes: Array<RouteRecordRaw> = [
     component: HomeView
   },
   {
-    path: '/register',
-    name: 'register',
-    component: McvRegister
+    path: '/auth',
+    component: AuthPage,
+    redirect: '/auth/register',
+    children: [
+      {
+        path: 'register',
+        name: 'register',
+        component: McvRegister
+      },
+      {
+        path: 'login',
+        name: 'login',
+        component: McvLogin
+      }
+    ]
   }
+
 ]
 
 const router = createRouter({

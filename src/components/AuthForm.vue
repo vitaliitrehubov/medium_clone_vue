@@ -7,27 +7,27 @@
       class="mb-2"
     >
       <input
-        v-model="formValue[name]"
+        v-model.trim="formValue[name]"
         :type="type"
         :name="name"
         :placeholder="placeholder"
-        class="form-control"
+        :class="[(errors?.[name] || emailOrPasswordInvalid) && 'is-invalid', 'form-control']"
         required
       />
+      <p v-if="errors?.[name]" class="text-capitalize text-danger mb-0">{{ name }} {{ errors?.[name]?.join() }}</p>
     </fieldset>
+    <p v-if="emailOrPasswordInvalid" class="text-capitalize text-danger mb-0">Email or Password is Invalid</p>
     <div class="d-grid">
-      <button
-        :disabled="isSubmitting"
-        :class="[isSubmitting && 'disabled', 'btn btn-success bg-gradient']"
-      >
-        {{ submitBtnText }}
+      <button :disabled="isSubmitting" class="btn btn-success bg-gradient btn-lg mt-2">
+        <span v-if="isSubmitting" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+        <span v-else>{{ submitBtnText }}</span>
       </button>
     </div>
   </form>
 </template>
 
 <script setup>
-import { defineProps, defineEmits } from 'vue'
+import { defineProps, defineEmits, onBeforeMount } from 'vue'
 import { useAuthState } from '@/composables/useAuthState'
 import { useAuthForm } from '@/composables/useAuthForm'
 
@@ -44,8 +44,10 @@ const props = defineProps({
 
 const emit = defineEmits(['submit'])
 
-const { isSubmitting } = useAuthState()
+const { isSubmitting, errors, emailOrPasswordInvalid, resetAuthState } = useAuthState()
 const { initFormValue } = useAuthForm()
+
+onBeforeMount(resetAuthState)
 
 const formValue = initFormValue(props.formFields);
 </script>
