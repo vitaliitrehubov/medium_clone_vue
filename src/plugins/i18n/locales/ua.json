@@ -2,5 +2,12 @@
   "forms": {
     "signUp": "реєстрація",
     "signIn": "увійти"
+  },
+  "header": {
+    "login": "логін",
+    "register": "реєстрація",
+    "home": "головна",
+    "newArticle": "новий пост",
+    "settings": "налаштування"
   }
 }

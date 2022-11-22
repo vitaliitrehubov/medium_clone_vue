@@ -2,5 +2,12 @@
   "forms": {
     "signUp": "sign up",
     "signIn": "sign in"
+  },
+  "header": {
+    "login": "login",
+    "register": "register",
+    "home": "home",
+    "newArticle": "new article",
+    "settings": "settings"
   }
 }
