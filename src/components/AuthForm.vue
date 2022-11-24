@@ -10,7 +10,7 @@
         v-model.trim="formValue[name]"
         :type="type"
         :name="name"
-        :placeholder="placeholder"
+        :placeholder="$t(placeholder)"
         :class="[(errors?.[name] || emailOrPasswordInvalid) && 'is-invalid', 'form-control']"
         required
       />
@@ -20,7 +20,7 @@
     <div class="d-grid">
       <button :disabled="isSubmitting" class="btn btn-success bg-gradient btn-lg mt-2">
         <span v-if="isSubmitting" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-        <span v-else>{{ submitBtnText }}</span>
+        <span v-else class="text-capitalize">{{ $t(submitBtnText) }}</span>
       </button>
     </div>
   </form>

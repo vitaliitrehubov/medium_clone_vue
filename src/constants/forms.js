@@ -1,10 +1,10 @@
 export const registerFormFields = [
-  { name: 'username', type: 'text', placeholder: 'Username' },
-  { name: 'email', type: 'email', placeholder: 'Email' },
-  { name: 'password', type: 'password', placeholder: 'Password' }
+  { name: 'username', type: 'text', placeholder: 'forms.username' },
+  { name: 'email', type: 'email', placeholder: 'forms.email' },
+  { name: 'password', type: 'password', placeholder: 'forms.password' }
 ]
 
 export const loginFormFields = [
-  { name: 'email', type: 'email', placeholder: 'Email' },
-  { name: 'password', type: 'password', placeholder: 'Password' }
+  { name: 'email', type: 'email', placeholder: 'forms.email' },
+  { name: 'password', type: 'password', placeholder: 'forms.password' }
 ]

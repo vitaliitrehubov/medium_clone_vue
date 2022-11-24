@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import GlobalFeed from '@/views/GlobalFeed.vue'
+import UserProfile from '@/views/UserProfile.vue'
+import ArticlePage from '@/views/ArticlePage.vue'
 import AuthPage from '@/views/AuthPage.vue'
 import McvRegister from '@/views/McvRegister.vue'
 import McvLogin from '@/views/McvLogin.vue'
@@ -7,8 +9,8 @@ import McvLogin from '@/views/McvLogin.vue'
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    name: 'globalFeed',
+    component: GlobalFeed
   },
   {
     path: '/auth',
@@ -26,8 +28,17 @@ const routes: Array<RouteRecordRaw> = [
         component: McvLogin
       }
     ]
+  },
+  {
+    path: '/article/:slug',
+    name: 'article',
+    component: ArticlePage
+  },
+  {
+    path: '/user-profile/:slug',
+    name: 'userProfile',
+    component: UserProfile
   }
-
 ]
 
 const router = createRouter({

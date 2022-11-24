@@ -1,10 +1,10 @@
 <template>
   <nav class="navbar navbar-light">
     <div class="container">
-      <router-link
-        :to="{ name: 'home' }"
-        class="text-uppercase h3 text-decoration-none text-success fw-bold mb-0"
-      >medium</router-link>
+      <router-link :to="{ name: 'globalFeed' }" class="text-uppercase h3 text-decoration-none text-success fw-bold mb-0">
+        medium</router-link>
+
+      <language-toggle></language-toggle>
 
       <ul v-if="isLoading" class="nav">
         <li v-for="num in 3" :key="num" class="nav-item ms-1">
@@ -13,17 +13,17 @@
       </ul>
       <ul v-else class="nav text-capitalize">
         <li class="nav-item">
-          <router-link :to="{ name: 'home' }" class="nav-link">{{ $t('header.home') }}</router-link>
+          <router-link :to="{ name: 'globalFeed' }" class="nav-link">{{ $t('header.home') }}</router-link>
         </li>
         <template v-if="isLoggedIn">
           <li class="nav-item">
-            <router-link :to="{ name: 'home' }" class="nav-link">{{ $t('header.newArticle') }}</router-link>
+            <router-link :to="{ name: 'globalFeed' }" class="nav-link">{{ $t('header.newArticle') }}</router-link>
           </li>
           <li class="nav-item">
-            <router-link :to="{ name: 'home' }" class="nav-link">{{ $t('header.settings') }}</router-link>
+            <router-link :to="{ name: 'globalFeed' }" class="nav-link">{{ $t('header.settings') }}</router-link>
           </li>
           <li class="nav-item">
-            <router-link :to="{ name: 'home', params: { slug: user.username } }" class="nav-link">
+            <router-link :to="{ name: 'globalFeed', params: { slug: user.username } }" class="nav-link">
               <img :src="user.image" alt="user image" style="width: 30px; height: 30px" class="rounded-circle" />
               {{ user.username }}
             </router-link>
@@ -44,22 +44,27 @@
 
 <script setup>
 import { useAuthState } from '@/composables/useAuthState'
-import LoadingSkeleton from '@/components/LoadingSkeleton.vue'
+import LoadingSkeleton from '@/components/LoadingSkeleton'
+import LanguageToggle from '@/components/LanguageToggle'
 
 const { user, isLoggedIn, isLoading } = useAuthState()
 </script>
 
 <style lang="scss" scoped>
-.nav {
+.navbar {
+  min-height: 70px;
 
-  li {
+  .nav {
 
-    a {
-      font-weight: 600;
-      color: #999;
+    li {
 
-      &.router-link-exact-active {
-        color: green;
+      a {
+        font-weight: 600;
+        color: #999;
+
+        &.router-link-exact-active {
+          color: green;
+        }
       }
     }
   }

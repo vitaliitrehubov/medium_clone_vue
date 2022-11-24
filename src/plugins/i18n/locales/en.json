@@ -1,7 +1,13 @@
 {
   "forms": {
+    "signUpAction": "sign up",
     "signUp": "sign up",
-    "signIn": "sign in"
+    "signIn": "sign in",
+    "noAccountMsg": "Don't have an account?",
+    "haveAccountMsg": "Already have an account?",
+    "email": "Email",
+    "password": "Password",
+    "username": "Username"
   },
   "header": {
     "login": "login",
@@ -9,5 +15,8 @@
     "home": "home",
     "newArticle": "new article",
     "settings": "settings"
+  },
+  "feed": {
+    "readMore": "Read more"
   }
 }

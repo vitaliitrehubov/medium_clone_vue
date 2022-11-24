@@ -24,8 +24,6 @@ export interface AuthState {
   isLoading: boolean;
 }
 
-
-
 export interface AuthErrorResponse {
   response: {
     data: {

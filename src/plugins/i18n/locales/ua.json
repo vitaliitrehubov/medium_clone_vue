@@ -1,7 +1,13 @@
 {
   "forms": {
+    "signUpAction": "зареєструватися",
     "signUp": "реєстрація",
-    "signIn": "увійти"
+    "signIn": "увійти",
+    "noAccountMsg": "Іще не зареєструвалися?",
+    "haveAccountMsg": "Вже зареєструвалися?",
+    "email": "Імейл",
+    "password": "Пароль",
+    "username": "Ім'я користувача"
   },
   "header": {
     "login": "логін",
@@ -9,5 +15,8 @@
     "home": "головна",
     "newArticle": "новий пост",
     "settings": "налаштування"
+  },
+  "feed": {
+    "readMore": "Читати білльше"
   }
 }

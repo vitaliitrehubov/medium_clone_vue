@@ -1,13 +1,13 @@
 <template>
   <h1 class="text-center text-muted text-capitalize">{{ $t('forms.signUp') }}</h1>
   <p class="text-center">
-    Already have an account?
-    <router-link :to="{ name: 'login' }">Log In</router-link>
+    {{ $t('forms.haveAccountMsg') }}
+    <router-link :to="{ name: 'login' }">{{ $t('forms.signIn') }}</router-link>
   </p>
   <auth-form
     @submit="onSubmit($event, credentials)"
     :form-fields="formFields"
-    submit-btn-text="Sign Up"
+    submit-btn-text="forms.signUpAction"
   ></auth-form>
 </template>
 

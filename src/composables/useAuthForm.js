@@ -11,13 +11,13 @@ export const useAuthForm = () => {
   const registerUser = (credentials) => {
     store
       .dispatch(actionTypes.register, credentials)
-      .then(() => router.push({ name: "home" }));
+      .then(() => router.push({ name: "globalFeed" }));
   };
 
   const loginUser = (credentials) => {
     store
       .dispatch(actionTypes.login, credentials)
-      .then(() => router.push({ name: "home" }));
+      .then(() => router.push({ name: "globalFeed" }));
   };
 
   const initFormValue = (formFields) => {
