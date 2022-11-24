@@ -13,6 +13,16 @@ const routes: Array<RouteRecordRaw> = [
     component: GlobalFeed
   },
   {
+    path: '/feed',
+    name: 'yourFeed',
+    component: GlobalFeed
+  },
+  {
+    path: '/tags/:slug',
+    name: 'tag',
+    component: GlobalFeed
+  },
+  {
     path: '/auth',
     component: AuthPage,
     redirect: '/auth/register',
@@ -30,13 +40,33 @@ const routes: Array<RouteRecordRaw> = [
     ]
   },
   {
-    path: '/article/:slug',
+    path: '/articles/new',
+    name: 'newArticle',
+    component: ArticlePage
+  },
+  {
+    path: '/articles/:slug',
     name: 'article',
     component: ArticlePage
   },
   {
-    path: '/user-profile/:slug',
+    path: '/articles/:edit',
+    name: 'editArticle',
+    component: ArticlePage
+  },
+  {
+    path: '/settings',
+    name: 'settings',
+    component: UserProfile
+  },
+  {
+    path: '/profiles/:slug',
     name: 'userProfile',
+    component: UserProfile
+  },
+  {
+    path: '/profiles/:slug/favorites',
+    name: 'userProfileFavorites',
     component: UserProfile
   }
 ]

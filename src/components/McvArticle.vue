@@ -1,7 +1,7 @@
 <template>
-  <div class="card">
-    <div class="card-body">
-      <div class="d-flex align-items-center mb-2">
+  <div class="card border-0 mb-3">
+    <div class="card-body  pt-0">
+      <div class="d-flex align-items-center mb-2 pt-3 border-top">
         <router-link :to="{ name: 'userProfile', params: { slug: article.author.username } }">
           <img :src="article.author.image" alt="Author image" class="rounded-circle me-2" />
         </router-link>

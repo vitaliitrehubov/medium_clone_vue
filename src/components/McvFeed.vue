@@ -9,21 +9,19 @@
     No articles found...
   </template>
   <template v-else>
-    <mcv-article
-      v-for="article in articles"
-      :key="article.slug"
-      :article="article"
-      :locale="locale"
-    ></mcv-article>
-    PAGINATION...
+    <mcv-article v-for="article in articles" :key="article.slug" :article="article" :locale="locale"></mcv-article>
+    
+    <mcv-pagination :total="total" :current-page="currentPage" :limit="10" :url="url"></mcv-pagination>
   </template>
 </template>
 
 <script setup>
-import { defineProps, onMounted } from 'vue'
+import { defineProps, onMounted, computed } from 'vue'
+import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { useFeedState } from '@/composables/useFeedState'
 import McvArticle from '@/components/McvArticle.vue'
+import McvPagination from '@/components/McvPagination.vue'
 
 const props = defineProps({
   apiUrl: {
@@ -32,8 +30,13 @@ const props = defineProps({
   }
 })
 
+const route = useRoute()
 const { locale } = useI18n({ useScope: 'global' })
 const { getFeed, error, isLoading, articles, articlesCount } = useFeedState()
+
+const total = computed(() => articlesCount.value ?? 1)
+const currentPage = computed(() => Number(route.query?.page || 1))
+const url = computed(() => route.path)
 
 onMounted(() => getFeed({ apiUrl: props.apiUrl }))
 </script>
