@@ -6,7 +6,12 @@
         class="text-uppercase h3 text-decoration-none text-success fw-bold mb-0"
       >medium</router-link>
 
-      <ul class="nav text-capitalize">
+      <ul v-if="isLoading" class="nav">
+        <li v-for="num in 3" :key="num" class="nav-item ms-1">
+          <loading-skeleton :width="100" :height="20"></loading-skeleton>
+        </li>
+      </ul>
+      <ul v-else class="nav text-capitalize">
         <li class="nav-item">
           <router-link :to="{ name: 'home' }" class="nav-link">{{ $t('header.home') }}</router-link>
         </li>
@@ -39,8 +44,9 @@
 
 <script setup>
 import { useAuthState } from '@/composables/useAuthState'
+import LoadingSkeleton from '@/components/LoadingSkeleton.vue'
 
-const { user, isLoggedIn } = useAuthState()
+const { user, isLoggedIn, isLoading } = useAuthState()
 </script>
 
 <style lang="scss" scoped>
@@ -51,6 +57,7 @@ const { user, isLoggedIn } = useAuthState()
     a {
       font-weight: 600;
       color: #999;
+
       &.router-link-exact-active {
         color: green;
       }

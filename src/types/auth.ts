@@ -21,6 +21,7 @@ export interface AuthState {
   errors: null | AuthValidationErrors;
   user: null | UserInterface;
   isLoggedIn: null | boolean;
+  isLoading: boolean;
 }
 
 
