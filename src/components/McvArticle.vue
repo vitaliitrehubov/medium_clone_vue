@@ -1,12 +1,12 @@
 <template>
-  <div class="card border-0 mb-3">
-    <div class="card-body  pt-0">
+  <div class="card border-0 mb-3 p-0">
+    <div class="card-body p-0">
       <div class="d-flex align-items-center mb-2 pt-3 border-top">
         <router-link :to="{ name: 'userProfile', params: { slug: article.author.username } }">
           <img :src="article.author.image" alt="Author image" class="rounded-circle me-2" />
         </router-link>
         
-        <div class="d">
+        <div>
           <router-link
             :to="{ name: 'userProfile', params: { slug: article.author.username } }"
             class="text-decoration-none text-success"
@@ -23,7 +23,13 @@
         <p class="card-text text-truncate">{{ article.body }}</p>
         <div class="d-flex justify-content-between">
           <span class="text-muted">{{ $t('feed.readMore') }}&hellip;</span>
-          <span>TAGLIST</span>
+          <div>   
+            <span
+              v-for="tag in article.tagList"
+              :key="tag"
+              class="badge bg-white rounded-pill ms-1 text-secondary border fw-light"
+            >{{ tag }}</span>
+          </div>
         </div>
         <router-link
           :to="{ name: 'article', params: { slug: article.slug }}"

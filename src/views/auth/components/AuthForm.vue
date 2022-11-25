@@ -44,10 +44,10 @@ const props = defineProps({
 
 const emit = defineEmits(['submit'])
 
-const { isSubmitting, errors, emailOrPasswordInvalid, resetAuthState } = useAuthState()
+const { isSubmitting, errors, emailOrPasswordInvalid, resetAuthErrors } = useAuthState()
 const { initFormValue } = useAuthForm()
 
-onBeforeMount(resetAuthState)
+onBeforeMount(resetAuthErrors)
 
 const formValue = initFormValue(props.formFields);
 </script>

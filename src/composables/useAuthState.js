@@ -13,7 +13,7 @@ export const useAuthState = () => {
   const errors = computed(() => store.state.auth.errors)
   const emailOrPasswordInvalid = computed(() => store.state.auth?.errors?.['email or password'])
 
-  const resetAuthState = () => store.commit(mutationTypes.resetState)
+  const resetAuthErrors = () => store.commit(mutationTypes.resetAuthErrors)
   const getUser = () => store.dispatch(actionTypes.getUser)
 
   return {
@@ -23,7 +23,7 @@ export const useAuthState = () => {
     isLoading,
     isSubmitting,
     errors,
-    resetAuthState,
+    resetAuthErrors,
     emailOrPasswordInvalid
   }
 }

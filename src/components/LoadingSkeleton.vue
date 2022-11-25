@@ -1,6 +1,6 @@
 <template>
   <div
-    :style="{ width: `${width}px`, height: `${height}px` }"
+    :style="{ width: width ? `${width}px` : '100%', height: `${height}px` }"
     :class="[borderRadius, 'skeleton-loading']"
   ></div>
 </template>
@@ -11,7 +11,7 @@ import { defineProps } from 'vue'
 const props = defineProps({
   width: {
     type: Number,
-    default: 160
+    required: false
   },
   height: {
     type: Number,

@@ -5,18 +5,16 @@
     <router-link :to="{ name: 'login' }">{{ $t('forms.signIn') }}</router-link>
   </p>
   <auth-form
-    @submit="onSubmit($event, credentials)"
+    @submit="registerUser($event, credentials)"
     :form-fields="formFields"
     submit-btn-text="forms.signUpAction"
   ></auth-form>
 </template>
 
 <script setup>
-import AuthForm from '@/components/AuthForm.vue'
+import AuthForm from '@/views/auth/components/AuthForm.vue'
 import { useAuthForm } from '@/composables/useAuthForm'
 import { registerFormFields as formFields } from '@/constants/forms'
 
 const { registerUser } = useAuthForm()
-
-const onSubmit = (credentials) => registerUser(credentials)
 </script>

@@ -4,7 +4,7 @@
       <router-link :to="{ name: 'globalFeed' }" class="text-uppercase h3 text-decoration-none text-success fw-bold mb-0">
         medium</router-link>
 
-      <language-toggle></language-toggle>
+      <language-select></language-select>
 
       <ul v-if="isLoading" class="nav">
         <li v-for="num in 3" :key="num" class="nav-item ms-1">
@@ -45,7 +45,7 @@
 <script setup>
 import { useAuthState } from '@/composables/useAuthState'
 import LoadingSkeleton from '@/components/LoadingSkeleton'
-import LanguageToggle from '@/components/LanguageToggle'
+import LanguageSelect from '@/components/LanguageSelect'
 
 const { user, isLoggedIn, isLoading } = useAuthState()
 </script>

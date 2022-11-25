@@ -14,7 +14,7 @@ export const mutationTypes = {
   registerFailure: '[auth] registerFailure',
   registerSuccess: '[auth] registerSuccess',
 
-  resetState: '[auth] resetState',
+  resetAuthErrors: '[auth] resetAuthErrors',
 
   loginStart: '[auth] loginStart',
   loginFailure: '[auth] loginFailure',
@@ -56,9 +56,8 @@ const mutations = {
     state.isLoggedIn = true
   },
 
-  [mutationTypes.resetState](state: AuthState) {
+  [mutationTypes.resetAuthErrors](state: AuthState) {
     state.isSubmitting = false,
-    state.user = null,
     state.isLoggedIn = null,
     state.errors = null
   },

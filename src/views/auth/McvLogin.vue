@@ -12,7 +12,7 @@
 </template>
 
 <script setup>
-import AuthForm from '@/components/AuthForm.vue'
+import AuthForm from '@/views/auth/components/AuthForm.vue'
 import { useAuthForm } from '@/composables/useAuthForm'
 import { loginFormFields } from '@/constants/forms'
 
