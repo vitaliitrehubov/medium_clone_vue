@@ -15,7 +15,7 @@ const props = defineProps({
   },
   height: {
     type: Number,
-    default: 40
+    default: 20
   },
   borderRadius: {
     type: String,

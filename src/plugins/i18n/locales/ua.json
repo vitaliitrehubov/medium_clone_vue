@@ -17,6 +17,8 @@
     "settings": "налаштування"
   },
   "feed": {
-    "readMore": "Читати більше"
+    "errorOccured": "сталася помилка!",
+    "readMore": "Читати більше",
+    "popularTags": "популярні теги"
   }
 }

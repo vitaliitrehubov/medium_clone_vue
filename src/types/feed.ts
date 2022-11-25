@@ -1,7 +1,19 @@
 export type FeedStateData = null | FeedInterface;
+export type PopularTags = string[];
+
+export interface PopularTagsResponse {
+  data: {
+    tags: PopularTags
+  }
+}
 
 export interface FeedState {
   data: FeedInterface;
+  isLoading: boolean;
+  error: boolean;
+}
+export interface PopularTagsState {
+  tags: null | PopularTags;
   isLoading: boolean;
   error: boolean;
 }

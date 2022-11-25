@@ -17,6 +17,8 @@
     "settings": "settings"
   },
   "feed": {
-    "readMore": "Read more"
+    "errorOccured": "error occured!",
+    "readMore": "Read more",
+    "popularTags": "popular tags"
   }
 }
