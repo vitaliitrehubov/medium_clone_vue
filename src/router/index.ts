@@ -1,27 +1,27 @@
 import { resolveComponent, h } from 'vue'
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import GlobalFeed from '@/views/GlobalFeed.vue'
-// import UserProfile from '@/views/UserProfile.vue'
-// import ArticlePage from '@/views/ArticlePage.vue'
-// import AuthPage from '@/views/AuthPage.vue'
-// import McvRegister from '@/views/auth/McvRegister.vue'
-// import McvLogin from '@/views/auth/McvLogin.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    name: 'globalFeed',
-    component: GlobalFeed
-  },
-  {
-    path: '/feed',
-    name: 'yourFeed',
-    component: GlobalFeed
-  },
-  {
-    path: '/tags/:slug',
-    name: 'tag',
-    component: GlobalFeed
+    component: () => import('@/views/feed/FeedLayout.vue'),
+    children: [
+      {
+        path: '',
+        name: 'globalFeed',
+        component: () => import('@/views/feed/GlobalFeed.vue')
+      },
+      {
+        path: 'feed',
+        name: 'yourFeed',
+        component: () => import('@/views/feed/YourFeed.vue')
+      },
+      {
+        path: 'tags/:slug',
+        name: 'tag',
+        component: () => import('@/views/feed/TagFeed.vue')
+      },
+    ]
   },
   {
     path: '/auth',

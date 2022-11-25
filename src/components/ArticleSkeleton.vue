@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-2">
+  <div>
     <loading-skeleton :height="1" class="mb-3"></loading-skeleton>
     <div class="d-flex align-items-center mb-2">
       <loading-skeleton :width="30" :height="30" border-radius="rounded-circle"></loading-skeleton>

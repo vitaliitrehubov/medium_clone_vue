@@ -1,4 +1,7 @@
 {
+  "common": {
+    "bannerText": "місце де діляться знаннями"
+  },
   "forms": {
     "signUpAction": "зареєструватися",
     "signUp": "реєстрація",
@@ -7,7 +10,8 @@
     "haveAccountMsg": "Вже зареєструвалися?",
     "email": "Імейл",
     "password": "Пароль",
-    "username": "Ім'я користувача"
+    "username": "Ім'я користувача",
+    "wrongLoginCreds": "неправильний імейл або пароль!"
   },
   "header": {
     "login": "логін",
@@ -19,6 +23,8 @@
   "feed": {
     "errorOccured": "сталася помилка!",
     "readMore": "Читати більше",
-    "popularTags": "популярні теги"
+    "popularTags": "популярні теги",
+    "globalFeed": "популярні статті",
+    "yourFeed": "підписки"
   }
 }

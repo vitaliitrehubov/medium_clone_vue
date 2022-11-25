@@ -7,7 +7,13 @@
         <loading-skeleton v-for="(num, i) in skeletonTagsWidth" :key="i" :width="num"></loading-skeleton>
       </template>
       <template v-if="popularTags">
-        <span v-for="(tag, i) in popularTags" :key="i" class="badge bg-secondary fw-normal">{{ tag }}</span>
+        <router-link
+          v-for="(tag, i) in popularTags"
+          :key="i"
+          :to="{ name: 'tag', params: { slug: tag }}"
+        >
+          <span class="badge bg-secondary fw-normal">{{ tag }}</span>
+        </router-link>
       </template>
     </div>
   </div>

@@ -1,4 +1,7 @@
 {
+  "common": {
+    "bannerText": "place to share knowledge"
+  },
   "forms": {
     "signUpAction": "sign up",
     "signUp": "sign up",
@@ -7,7 +10,8 @@
     "haveAccountMsg": "Already have an account?",
     "email": "Email",
     "password": "Password",
-    "username": "Username"
+    "username": "Username",
+    "wrongLoginCreds": "wrong email or password!"
   },
   "header": {
     "login": "login",
@@ -19,6 +23,8 @@
   "feed": {
     "errorOccured": "error occured!",
     "readMore": "Read more",
-    "popularTags": "popular tags"
+    "popularTags": "popular tags",
+    "globalFeed": "global feed",
+    "yourFeed": "your feed"
   }
 }

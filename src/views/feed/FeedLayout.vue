@@ -1,24 +1,25 @@
 <template>
   <div class="home-page">
-    BANNER
+    <mcv-banner></mcv-banner>
     <div class="container">
       <div class="row">
         <div class="col-lg-3 mb-3 mb-lg-0 order-lg-last">
           <popular-tags></popular-tags>
         </div>
         <div class="col-lg-9">
-          <mcv-feed :api-url="apiUrl"></mcv-feed>
+          <feed-toggle :tag-name="tagName"></feed-toggle>
+          <router-view></router-view>
         </div>
       </div>
     </div>
-    
   </div>
 </template>
 
 <script setup>
-import { computed } from 'vue'
-import McvFeed from '@/components/McvFeed.vue'
+import McvBanner from '@/components/McvBanner.vue'
 import PopularTags from '@/components/PopularTags.vue'
+import FeedToggle from '@/views/feed/components/FeedToggle.vue'
+import { useFeedRoute } from '@/views/feed/useRoute'
 
-const apiUrl = '/articles'
+const { tagName } = useFeedRoute()
 </script>

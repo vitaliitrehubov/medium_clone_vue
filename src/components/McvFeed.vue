@@ -47,6 +47,9 @@ const params = computed(() => ({
 }))
 
 onMounted(() => getFeed({ apiUrl: handleUrlParams(params.value) }))
-watch(() => route.query.page, () => getFeed({ apiUrl: handleUrlParams(params.value) }))
+watch(
+  () => [route.query.page, route.params?.slug],
+  () => getFeed({ apiUrl: handleUrlParams(params.value) })
+)
 </script>
 

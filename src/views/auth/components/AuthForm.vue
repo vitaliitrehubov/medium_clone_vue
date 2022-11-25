@@ -16,7 +16,7 @@
       />
       <p v-if="errors?.[name]" class="text-capitalize text-danger mb-0">{{ name }} {{ errors?.[name]?.join() }}</p>
     </fieldset>
-    <p v-if="emailOrPasswordInvalid" class="text-capitalize text-danger mb-0">Email or Password is Invalid</p>
+    <p v-if="emailOrPasswordInvalid" class="text-capitalize text-danger mb-0">{{ $t('forms.wrongLoginCreds') }}</p>
     <div class="d-grid">
       <button :disabled="isSubmitting" class="btn btn-success bg-gradient btn-lg mt-2">
         <span v-if="isSubmitting" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
