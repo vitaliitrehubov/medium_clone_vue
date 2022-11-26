@@ -44,8 +44,8 @@
 
 <script setup>
 import { useAuthState } from '@/composables/useAuthState'
-import LoadingSkeleton from '@/components/LoadingSkeleton'
-import LanguageSelect from '@/components/LanguageSelect'
+import { LoadingSkeleton } from '@/components/common'
+import { LanguageSelect } from '@/components/base'
 
 const { user, isLoggedIn, isLoading } = useAuthState()
 </script>

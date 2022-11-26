@@ -33,7 +33,7 @@
 
 <script setup>
 import { defineProps } from 'vue'
-import LoadingSkeleton from '@/components/LoadingSkeleton.vue'
+import { LoadingSkeleton } from '@/components/common'
 import { useAuthState } from '@/composables/useAuthState'
 const { isLoggedIn, isLoading } = useAuthState()
 

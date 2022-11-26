@@ -3,5 +3,5 @@
 </template>
 
 <script setup>
-import McvFeed from '@/components/McvFeed.vue'
+import { McvFeed } from '@/views/feed/components'
 </script>

@@ -3,7 +3,7 @@
 </template>
 
 <script setup>
-import McvFeed from '@/components/McvFeed.vue'
+import { McvFeed } from '@/views/feed/components'
 import { useFeedRoute } from '@/views/feed/useRoute'
 const { apiUrl } = useFeedRoute()
 </script>

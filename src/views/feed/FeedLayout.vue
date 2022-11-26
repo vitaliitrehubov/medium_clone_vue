@@ -16,9 +16,8 @@
 </template>
 
 <script setup>
-import McvBanner from '@/components/McvBanner.vue'
-import PopularTags from '@/components/PopularTags.vue'
-import FeedToggle from '@/views/feed/components/FeedToggle.vue'
+import { McvBanner } from '@/components/common'
+import { FeedToggle, PopularTags } from '@/views/feed/components'
 import { useFeedRoute } from '@/views/feed/useRoute'
 
 const { tagName } = useFeedRoute()

@@ -20,11 +20,9 @@ import { defineProps, onMounted, computed, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { handleUrlParams } from '@/utils/queryString'
-import { useFeedState } from '@/composables/useFeedState'
+import { useFeedState } from '@/views/feed/composables/useFeedState'
 import { LIMIT_PER_PAGE } from '@/constants/feed'
-import McvArticle from '@/components/McvArticle.vue'
-import McvPagination from '@/components/McvPagination.vue'
-import ArticleSkeleton from '@/components/ArticleSkeleton.vue'
+import { ArticleSkeleton, McvArticle, McvPagination } from '@/views/feed/components'
 
 const props = defineProps({
   apiUrl: {

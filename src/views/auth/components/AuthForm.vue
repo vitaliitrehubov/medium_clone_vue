@@ -29,7 +29,7 @@
 <script setup>
 import { defineProps, defineEmits, onBeforeMount } from 'vue'
 import { useAuthState } from '@/composables/useAuthState'
-import { useAuthForm } from '@/composables/useAuthForm'
+import { useAuthForm } from '@/views/auth/composables/useAuthForm'
 
 const props = defineProps({
   formFields: {

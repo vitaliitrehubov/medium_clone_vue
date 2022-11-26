@@ -13,7 +13,7 @@
 
 <script setup>
 import AuthForm from '@/views/auth/components/AuthForm.vue'
-import { useAuthForm } from '@/composables/useAuthForm'
+import { useAuthForm } from '@/views/auth/composables/useAuthForm'
 import { registerFormFields as formFields } from '@/constants/forms'
 
 const { registerUser } = useAuthForm()

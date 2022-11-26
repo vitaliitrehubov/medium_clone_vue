@@ -7,6 +7,12 @@ export interface PopularTagsResponse {
   }
 }
 
+export interface ArticleState {
+  data: ArticleInterface;
+  isLoading: boolean;
+  error: boolean;
+}
+
 export interface FeedState {
   data: FeedInterface;
   isLoading: boolean;
@@ -41,6 +47,12 @@ export interface ArticleInterface {
   author: AuthorInterface;
   createdAt: Date | string;
   updatedAt: Date | string;
+}
+
+export interface ArticleResponse {
+  data: {
+    article: ArticleInterface
+  }
 }
 
 export interface FeedResponse {
