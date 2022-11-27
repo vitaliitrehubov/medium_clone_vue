@@ -4,7 +4,7 @@
 </template>
 
 <script setup>
-import { TopBar } from '@/components/base'
+import { TopBar } from '@/components'
 import { onMounted } from 'vue'
 import { useAuthState } from '@/composables/useAuthState'
 

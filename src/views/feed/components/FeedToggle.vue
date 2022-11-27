@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-if="isLoading" class="d-flex gap-1 mb-2">
-      <loading-skeleton v-for="i in 2" :key="i" :width="120"></loading-skeleton>
+      <baseloadingskeleton v-for="i in 2" :key="i" :width="120" />
     </div>
     <ul v-else class="nav nav-pills">
       <li v-if="isLoggedIn" class="nav-item text-capitalize">
@@ -33,7 +33,6 @@
 
 <script setup>
 import { defineProps } from 'vue'
-import { LoadingSkeleton } from '@/components/common'
 import { useAuthState } from '@/composables/useAuthState'
 const { isLoggedIn, isLoading } = useAuthState()
 

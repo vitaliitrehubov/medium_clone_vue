@@ -1,6 +1,9 @@
 {
   "common": {
-    "bannerText": "place to share knowledge"
+    "bannerText": "place to share knowledge",
+    "follow": "follow",
+    "editArticle": "edit article",
+    "deleteArticle": "delete article"
   },
   "forms": {
     "signUpAction": "sign up",

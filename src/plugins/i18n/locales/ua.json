@@ -1,6 +1,9 @@
 {
   "common": {
-    "bannerText": "місце де діляться знаннями"
+    "bannerText": "місце де діляться знаннями",
+    "follow": "підписатися",
+    "editArticle": "редагувати статтю",
+    "deleteArticle": "видалити статтю"
   },
   "forms": {
     "signUpAction": "зареєструватися",

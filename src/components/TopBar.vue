@@ -8,7 +8,7 @@
 
       <ul v-if="isLoading" class="nav">
         <li v-for="num in 3" :key="num" class="nav-item ms-1">
-          <loading-skeleton :width="100" :height="20"></loading-skeleton>
+          <baseloadingskeleton :width="100" :height="20" />
         </li>
       </ul>
       <ul v-else class="nav text-capitalize">
@@ -44,8 +44,7 @@
 
 <script setup>
 import { useAuthState } from '@/composables/useAuthState'
-import { LoadingSkeleton } from '@/components/common'
-import { LanguageSelect } from '@/components/base'
+import { LanguageSelect } from '@/components'
 
 const { user, isLoggedIn, isLoading } = useAuthState()
 </script>

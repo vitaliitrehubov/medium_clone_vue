@@ -16,7 +16,7 @@
 </template>
 
 <script setup>
-import { McvBanner } from '@/components/common'
+import { McvBanner } from '@/components'
 import { FeedToggle, PopularTags } from '@/views/feed/components'
 import { useFeedRoute } from '@/views/feed/useRoute'
 

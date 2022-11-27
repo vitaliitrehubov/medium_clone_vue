@@ -7,6 +7,12 @@ const getArticle = (slug: string): Promise<any> => {
     .then(({ data: { article } }: ArticleResponse) => article)
 }
 
+const deleteArticle = (slug: string): Promise<any> => {
+  return axios
+    .delete(`/articles/${slug}`)
+}
+
 export default {
-  getArticle
+  getArticle,
+  deleteArticle
 }

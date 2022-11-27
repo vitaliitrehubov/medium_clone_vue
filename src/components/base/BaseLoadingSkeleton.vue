@@ -15,10 +15,12 @@ const props = defineProps({
   },
   height: {
     type: Number,
+    required: false,
     default: 20
   },
   borderRadius: {
     type: String,
+    required: false,
     default: 'rounded'
   }
 })
