@@ -17,7 +17,7 @@
         </li>
         <template v-if="isLoggedIn">
           <li class="nav-item">
-            <router-link :to="{ name: 'globalFeed' }" class="nav-link">{{ $t('header.newArticle') }}</router-link>
+            <router-link :to="{ name: 'newArticle' }" class="nav-link">{{ $t('header.newArticle') }}</router-link>
           </li>
           <li class="nav-item">
             <router-link :to="{ name: 'globalFeed' }" class="nav-link">{{ $t('header.settings') }}</router-link>

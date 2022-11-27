@@ -1,0 +1,1 @@
+export { default as ArticleForm } from '@/views/articles/components/ArticleForm.vue'

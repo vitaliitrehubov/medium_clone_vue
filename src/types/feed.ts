@@ -36,6 +36,24 @@ export interface AuthorInterface {
   bio: null | string;
 }
 
+export interface CreateArticleErrorResponse {
+  response: {
+    data: string;
+  }
+}
+
+export interface NewArticleState {
+  isSubmitting: boolean;
+  validationErrors: null | boolean;
+}
+
+export interface NewArticleInterface {
+  title: string;
+  description: string;
+  body: string;
+  tagList: string[];
+}
+
 export interface ArticleInterface {
   slug: string;
   title: string;

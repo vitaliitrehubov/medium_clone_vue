@@ -14,7 +14,13 @@
     "email": "Імейл",
     "password": "Пароль",
     "username": "Ім'я користувача",
-    "wrongLoginCreds": "неправильний імейл або пароль!"
+    "wrongLoginCreds": "неправильний імейл або пароль!",
+    "createArticle": "Написати статтю",
+    "articleTitle": "Назва статті",
+    "articleDescription": "Про що ця стаття?",
+    "articleBody": "Текст статті",
+    "enterTags": "Введіть теги",
+    "publishArticle": "Опублікувати статтю"
   },
   "header": {
     "login": "логін",

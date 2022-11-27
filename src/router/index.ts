@@ -50,7 +50,7 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: 'new',
         name: 'newArticle',
-        component: () => import('@/views/articles/ArticlePage.vue')
+        component: () => import('@/views/articles/CreateArticle.vue')
       },
       {
         path: ':slug',

@@ -1,5 +1,5 @@
 import axios from '@/api/axios'
-import { ArticleResponse } from '@/types/feed'
+import { ArticleResponse, NewArticleInterface } from '@/types/feed'
 
 const getArticle = (slug: string): Promise<any> => {
   return axios
@@ -12,7 +12,14 @@ const deleteArticle = (slug: string): Promise<any> => {
     .delete(`/articles/${slug}`)
 }
 
+const createArticle = (article: NewArticleInterface): Promise<any> => {
+  return axios
+    .post('/articles', { article })
+    .then(({ data: { article } }: ArticleResponse) => article.slug)
+}
+
 export default {
   getArticle,
-  deleteArticle
+  deleteArticle,
+  createArticle
 }

@@ -14,7 +14,13 @@
     "email": "Email",
     "password": "Password",
     "username": "Username",
-    "wrongLoginCreds": "wrong email or password!"
+    "wrongLoginCreds": "wrong email or password!",
+    "createArticle": "Create article",
+    "articleTitle": "Article Title",
+    "articleDescription": "What's this article about?",
+    "articleBody": "Write your article",
+    "enterTags": "Enter tags",
+    "publishArticle": "Publish Article"
   },
   "header": {
     "login": "login",
